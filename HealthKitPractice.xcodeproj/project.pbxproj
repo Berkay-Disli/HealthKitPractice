@@ -11,6 +11,9 @@
 		235C83072A0D309100E2DE18 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235C83062A0D309100E2DE18 /* ContentView.swift */; };
 		235C83092A0D309200E2DE18 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 235C83082A0D309200E2DE18 /* Assets.xcassets */; };
 		235C830D2A0D309200E2DE18 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 235C830C2A0D309200E2DE18 /* Preview Assets.xcassets */; };
+		235C83142A0D310700E2DE18 /* SleepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235C83132A0D310700E2DE18 /* SleepView.swift */; };
+		235C83162A0D347100E2DE18 /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235C83152A0D347100E2DE18 /* ActivityView.swift */; };
+		23B9C83B2A0D4C4500B32F2F /* NewSleepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B9C83A2A0D4C4500B32F2F /* NewSleepView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +23,9 @@
 		235C83082A0D309200E2DE18 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		235C830A2A0D309200E2DE18 /* HealthKitPractice.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HealthKitPractice.entitlements; sourceTree = "<group>"; };
 		235C830C2A0D309200E2DE18 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		235C83132A0D310700E2DE18 /* SleepView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepView.swift; sourceTree = "<group>"; };
+		235C83152A0D347100E2DE18 /* ActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
+		23B9C83A2A0D4C4500B32F2F /* NewSleepView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewSleepView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +60,9 @@
 			children = (
 				235C83042A0D309100E2DE18 /* HealthKitPracticeApp.swift */,
 				235C83062A0D309100E2DE18 /* ContentView.swift */,
+				235C83132A0D310700E2DE18 /* SleepView.swift */,
+				235C83152A0D347100E2DE18 /* ActivityView.swift */,
+				23B9C83A2A0D4C4500B32F2F /* NewSleepView.swift */,
 				235C83082A0D309200E2DE18 /* Assets.xcassets */,
 				235C830A2A0D309200E2DE18 /* HealthKitPractice.entitlements */,
 				235C830B2A0D309200E2DE18 /* Preview Content */,
@@ -139,8 +148,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23B9C83B2A0D4C4500B32F2F /* NewSleepView.swift in Sources */,
 				235C83072A0D309100E2DE18 /* ContentView.swift in Sources */,
+				235C83162A0D347100E2DE18 /* ActivityView.swift in Sources */,
 				235C83052A0D309100E2DE18 /* HealthKitPracticeApp.swift in Sources */,
+				235C83142A0D310700E2DE18 /* SleepView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,6 +281,8 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "This app requires this.";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "This app requires this.";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -279,7 +293,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
@@ -287,10 +301,12 @@
 				PRODUCT_BUNDLE_IDENTIFIER = berkaydisli.HealthKitPractice;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -307,6 +323,8 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "This app requires this.";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "This app requires this.";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -317,7 +335,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
@@ -325,10 +343,12 @@
 				PRODUCT_BUNDLE_IDENTIFIER = berkaydisli.HealthKitPractice;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
